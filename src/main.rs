@@ -16,4 +16,19 @@ fn main() {
         string.push(i);
     }
     println!("The word reversed is: {}", string);
+
+    let string_two = reverse_string("hello");
+    println!("The reverse_string function returned {}", string_two);
+
+    assert_eq!(reverse_string("hello"), "olleh");
+    assert_eq!(reverse_string("rust"), "tsur");
+    assert_eq!(reverse_string("abcdefg"), "gfedcba");
+}
+
+fn reverse_string(input: &str) -> String {
+    let mut string = String::new();
+    for i in input.chars().rev() {
+        string.push(i);
+    }
+    string
 }
