@@ -17,7 +17,7 @@ fn main() {
     }
     println!("The word reversed is: {}", string);
 
-    let string_two = reverse_string("hello");
+    let string_two = reverse_string(&string);
     println!("The reverse_string function returned {}", string_two);
 
     assert_eq!(reverse_string("hello"), "olleh");
